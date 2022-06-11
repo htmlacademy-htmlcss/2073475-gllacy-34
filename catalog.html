@@ -51,7 +51,8 @@
         </nav>
     </header>
 
-    <main class="main-inner">
+    <main class="main-inner main-container">
+        <div class="page-container">
         <header class="inner-header">
             <h1 class="visually-hidden">Каталог</h1>
             <ul class="breadcrumbs">
@@ -67,7 +68,7 @@
         <section class="catalog-products">
             <h2 class="catalog-title">Сливочное мороженое</h2>
             <form class="catalog-filter" action="http//:echo.htmlacademy.ru" method="get">
-
+            <div class="filter-1">
                 <fieldset class="catalog-filter-group">
                     <legend>Сортировка:</legend>
                 <select class="select-control" name="sort">
@@ -111,7 +112,9 @@
                         </li>
                     </ul>
                 </fieldset>
+            </div>
 
+            <div class="filter-2">
                 <fieldset class="catalog-filter-group">
                     <legend class="catalog-filter-title">Наполнители:</legend>
                     <ul class="catalog-filter-list">
@@ -150,7 +153,7 @@
 
                 <button class="button" type="submit">Применить</button>
             </form>
-        
+            </div>
 
         <ul class="product-list">
             <li class="product-card">
@@ -303,9 +306,11 @@
         </ul>
         <button class="button pagination-show-more" type="button">Показать еще</button>
         </section>
+        </div>
     </main>
 
     <footer class="page-footer">
+        <div class="page-footer-container">
     <div class="footer-social">        
         <ul class="footer-social-list">
             <li class="footer-social-item">
@@ -326,18 +331,19 @@
         </ul>
     </div>
 
-    <ul class="footer-nav">
-        <li class="footer-nav-item"><b>Для поставщиков</b></li>
-        <li class="footer-nav-item">О производстве</li>
-    </ul>
-    <ul class="footer-nav">
-        <li class="footer-nav-item">Наши документы</li>
-        <li class="footer-nav-item">Экологические стандарты</li>
-    </ul>
-    <ul class="footer-nav">
-        <li class="footer-nav-item"><img src="images/icons/logo_htmlacademy.png" width="93" height="27" alt="logo-academy"></li>
-        <li class="footer-nav-item">Сделано в <a href="https://htmlacademy.ru/ ">.html academy</a> © 2021</li>
-    </ul>
+        <ul class="footer-nav">
+            <li class="footer-nav-item"><b>Для поставщиков</b></li>
+            <li class="footer-nav-item">О производстве</li>
+        </ul>
+        <ul class="footer-nav">
+            <li class="footer-nav-item">Наши документы</li>
+            <li class="footer-nav-item">Экологические стандарты</li>
+        </ul>
+        <ul class="footer-nav">
+            <li class="footer-nav-item"><img src="images/icons/logo_htmlacademy.png" width="93" height="27" alt="logo-academy"></li>
+            <li class="footer-nav-item">Сделано в <a href="https://htmlacademy.ru/ ">.html academy</a> © 2021</li>
+        </ul>
+        </div>
     </footer>
 </body>
 </html>
