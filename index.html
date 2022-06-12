@@ -51,6 +51,7 @@
     <main class="main-container main-index">
         <div class="page-container">
         <h1 class="visually-hidden">Интернет-магазин Мороженого</h1>
+        <section class="slider">
         <h2 class="visually-hidden">Галлерея мороженого</h2>
     
         <div class="sliders">            
@@ -87,9 +88,10 @@
                     <button class="slider-button slider-next" type="button">
                         <span class="visually-hidden">Следующее</span>
                     </button>
-                </div>
                 <img src="images/ice-cream-waffle/banana-small.png" width="66" height="150" alt="banana-small">
                 <img src="images/ice-cream-waffle/caramel-small.png" width="66" height="150" alt="caramel-small">
+                </div>
+                
 <!--
                 <div class="slider-image">
                     <button class="slider-button slider-prev" type="button">
@@ -130,33 +132,38 @@
                     <a href="https://www.youtube.com/user/htmlacademy.ru">Youtube</a>
                 </div>
             </div>
-         
-    
+        </section>     
 
-        <!-- Promotion -->
-        <h2 class="visually-hidden">Акции</h2>
-        <h3 class="title-promotion">Заказывайте мороженое <br> и получайте подарки!</h3>
-        <div class="container-promotion">
-            <div  class="banner">
-                <p class="banner-title">Малинка даром!</p>
-                <p>При покупке 2 кг любого фруктового <br>
-                    мороженого добавим в ваш заказ банку <br>
-                    малинового варенья бесплатно.</p>
+    <!-- Promotion -->
+        <section class="promotion">
+            <h2 class="visually-hidden">Акции</h2>
+            <h3 class="title-promotion">Заказывайте мороженое <br> и получайте подарки!</h3>
+            <div class="container-promotion">
+                <div class="banner">
+                    <div class="banner-text">
+                    <p class="banner-title">Малинка даром!</p>
+                    <p>При покупке 2 кг любого фруктового <br>
+                        мороженого добавим в ваш заказ банку <br>
+                        малинового варенья бесплатно.</p>
                 <a class="button button-order" href="#">Хочу подарок</a>
-            </div>
-            <img class="banner-image" src="images/ice-cream-waffle/rasberries.png" width="219" height="268" alt="rasberries">
-            <div class="banner">
-                <p class="banner-title">Маршмеллоу даром!</p>
-                <p>При покупке 2 кг пломбира добавим <br>
-                    в ваш заказ упаковку нежных <br>
-                    зефирок совершенно бесплатно.</p>
+                    </div>
+                <img class="banner-image" src="images/ice-cream-waffle/rasberries.png" width="219" height="268" alt="rasberries">
+                </div>
+                <div class="banner">
+                    <div class="banner-text">
+                    <p class="banner-title">Маршмеллоу даром!</p>
+                    <p>При покупке 2 кг пломбира добавим <br>
+                        в ваш заказ упаковку нежных <br>
+                        зефирок совершенно бесплатно.</p>
                 <a class="button button-order" href="#">Хочу подарок</a>
+                </div>
+                <img class="banner-image" src="images/ice-cream-waffle/marshmallows.png" width="219" height="268" alt="marshmallows">
+                </div>
             </div>
-            <img class="banner-image" src="images/ice-cream-waffle/marshmallows.png" width="219" height="268" alt="marshmallows">
-        </div>
+        </section>
 
         <!-- Popular items -->
-
+        <section class="popular">
         <h2 class="visually-hidden">Популярное мороженое</h2>
             <p class="popular-items-title">Попробуйте самые популярные <br>
             вкусы нашего мороженого</p>
@@ -203,6 +210,7 @@
                 </li>
             </ul>
         </div>
+    </section>
 
         <!-- About -->
 
@@ -234,7 +242,7 @@
 
         <!-- News and Subscription -->
 
-        <div class="container-news-and-subscribtion">
+        <div class="container-info">
             <div class="news">
                 <h2 class="visually-hidden">Новости</h2>
                     <p>Новое в нашем блоге</p>

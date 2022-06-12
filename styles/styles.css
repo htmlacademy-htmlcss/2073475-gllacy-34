@@ -115,7 +115,6 @@ body {
 
 .sliders-outer {
     display: flex;
-    justify-content: space-between;
     margin: 0;
     padding: 0;
 
@@ -146,13 +145,27 @@ body {
     display: flex;
     justify-content: space-between;
 }
+
+.slide-item .active {
+    display: flex;
+}
+
+.slide-item {
+    display: none;
+}
+
+.slider-image {
+    width: 350px;
+    display: flex;
+}
 /* Promotion */
 
 .container-promotion {
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
 }
 
 .title-promotion {
@@ -164,9 +177,11 @@ body {
 }
 
 .banner {
+    display: flex;
     width: 570px;
     margin: 0;
     padding: 0;
+    background-color: #FF7799;
 }
 
 .banner-title {
@@ -180,6 +195,15 @@ body {
     font-size: 16px;
     line-height: 22px;
     text-align: left;
+}
+
+.banner-text {
+    width: 330px;
+    flex-direction: column;
+    align-items:flex-start;
+    margin: 0;
+    padding: 0;
+    margin-left: 33px;
 }
 
 /* Popular items */
@@ -201,11 +225,17 @@ body {
 }
 
 .product-list {
+    width: 1170px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
     text-align: center;
+}
+
+.product-card {
+    width: 270px;
 }
 
 .product-card p {
@@ -228,6 +258,7 @@ body {
     display: flex;
     justify-content: space-around;
     width: 1122px;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
 }
@@ -251,9 +282,10 @@ body {
 
 /* News and Subscription */
 
-.container-news-and-subscribtion {
+.container-info {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .news {
@@ -428,7 +460,6 @@ address {
     text-align: left;
 }
 
-
 .catalog-filter {
     width: 825px;
     margin: 0;
@@ -438,16 +469,30 @@ address {
 
 .filter-1 {
     display: flex;
+    justify-content: space-between;
 }
 
 .filter-2 {
     display: flex;
+    justify-content: space-between;
+}
+
+.catalog-filter-group {
+    width: 196px;
+}
+
+.block-pagination {
+    width: 1365px;
+    display: flex;
+    justify-content: center;
 }
 
 .pagination {
     display: flex;
     justify-content: space-between;
 }
+
+/* Footer */
 
 .page-footer {
     display: flex;
