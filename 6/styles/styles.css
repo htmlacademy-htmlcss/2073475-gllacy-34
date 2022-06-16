@@ -113,11 +113,20 @@ body {
 
 /* Slides */
 
-.sliders-outer {
-    display: flex;
+.slider-item {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
     margin: 0;
     padding: 0;
+}
 
+.active {
+    display: flex;
+}
+
+.slider-image {
+    display: block;
 }
 
 .title-ice-cream {
@@ -127,6 +136,8 @@ body {
     font-style: black;
     text-align: left;
 }
+
+
 
 .button {
     font-family: inherit;
@@ -144,19 +155,6 @@ body {
 .dots-social {
     display: flex;
     justify-content: space-between;
-}
-
-.slide-item .active {
-    display: flex;
-}
-
-.slide-item {
-    display: none;
-}
-
-.slider-image {
-    width: 350px;
-    display: flex;
 }
 /* Promotion */
 
@@ -475,6 +473,7 @@ address {
 .filter-2 {
     display: flex;
     justify-content: space-between;
+    align-items:center;
 }
 
 .catalog-filter-group {
@@ -485,6 +484,7 @@ address {
     width: 1365px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .pagination {
