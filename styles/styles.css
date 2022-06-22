@@ -186,6 +186,12 @@ body {
      display: flex;
 }
 
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color:#FCFCFC;
+}
+
 .header-social {
     margin-left: auto;
 }
@@ -567,7 +573,7 @@ address {
 /* Footer */
 
 .page-footer {
-    height: 153px;
+    min-height: 153px;
     font-size: 14px;
     line-height: 20px;
     font-weight: 400;
@@ -584,6 +590,7 @@ address {
 .footer-social-list {
     display: flex;
     flex-wrap: wrap;
+    margin: 0;
     padding: 0;
     list-style-type: none;
 }
@@ -591,7 +598,7 @@ address {
 .footer-social {
     display: flex;
     width: 104px;
-    margin: 0 299px 81px 4px;
+    margin: 0 299px 0 4px;
 } 
 
 .footer-social-item {
@@ -630,7 +637,6 @@ address {
     display: flex;
     margin: 0;
     margin-right: 200px;
-    margin-bottom: 56px;
 }
 
 .item-link {
