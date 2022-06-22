@@ -508,7 +508,7 @@ label {
 /* Contacts */
 
 .contacts {
-    height: 492px;
+    min-height: 492px;
     font-size: 16px;
     line-height: 22px;
     background-image: url(../images/address.jpg);
@@ -519,7 +519,7 @@ label {
 
 .container-contacts {
     width: 343px;
-    height: 364px;
+    min-height: 364px;
     margin-left: 64px;
     padding-top: 64px;
 }
@@ -567,7 +567,7 @@ address {
 /* Footer */
 
 .page-footer {
-    height: 153px;
+    min-height: 153px;
     font-size: 14px;
     line-height: 20px;
     font-weight: 400;
@@ -591,7 +591,7 @@ address {
 .footer-social {
     display: flex;
     width: 104px;
-    margin: 0 299px 81px 4px;
+    margin: 0 299px 0px 4px;
 } 
 
 .footer-social-item {
@@ -630,13 +630,16 @@ address {
     display: flex;
     margin: 0;
     margin-right: 200px;
-    margin-bottom: 56px;
 }
 
 .item-link {
     font-size: 12px;
     line-height: 16px;
 } 
+
+.academy {
+    margin-right: 14px;
+}
 
 /* Catalog */
 
