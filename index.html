@@ -28,8 +28,8 @@
                     <a class="navigation-link navigation-phone" href="#">+7 800 555-86-28</a>
                 </li>
                 <li class="navigation-item">
-                    <a class="navigation-link" href="#">
-                        <svg class="navigation-icon navigation-link-serach" aria-hidden="true" focusable="false" width="16" height="17" viewBox="0 0 16 17" fill="none"
+                    <a class="navigation-link navigation-link-serach" href="#">
+                        <svg class="navigation-icon" aria-hidden="true" focusable="false" width="16" height="17" viewBox="0 0 16 17" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M2.66 8.19a4.67 4.67 0 1 1 9.34 0 4.67 4.67
                             0 0 1-9.34 0Zm8.42 4.69a6 6 0 1 1 .94-.94l2.45 2.44a.67.67 0 1 1-.94.95l-2.45-2.45Z" />
@@ -69,6 +69,7 @@
     <main class="main-container main-index">
         <div class="page-container">
         <h1 class="visually-hidden">Интернет-магазин Мороженого</h1>
+
         <section class="slider">
         <h2 class="visually-hidden">Галлерея мороженого</h2>
         <div class="sliders">
@@ -251,7 +252,7 @@
             <ul class="product-list">
                 <li class="product-card">
                     <a class="product-card-link" href="product.html">
-                        <img class="product-card-image" src="images/ice-cream-cards/rasberry.jpg" width="168" height="168" alt="Малинка">
+                        <img class="product-card-image" src="images/ice-cream-cards/malinka-png.png" width="168" height="168" alt="Малинка">
                             <h3 class="product-card-title">Малинка</h3>
                     </a>
                         <p>Сливочное мороженое <br> с малиновым джемом</p>
@@ -271,7 +272,7 @@
                 </li>
                 <li class="product-card">
                     <a class="product-card-link" href="product.html">
-                        <img class="product-card-image" src="images/ice-cream-cards/pistachio.jpg" width="168" height="168" alt="Фисташка">
+                        <img class="product-card-image" src="images/ice-cream-cards/pistachio.png" width="168" height="168" alt="Фисташка">
                         <h3 class="product-card-title" >Фисташка</h3>
                     </a>
                         <p>Фисташковый пломбир <br> с кусочками шоколада</p>
@@ -292,7 +293,7 @@
 
                 <li class="product-card">
                     <a class="product-card-link" href="product.html">
-                        <img class="product-card-image" src="images/ice-cream-cards/blueberry.jpg" width="168" height="168" alt="Черника">
+                        <img class="product-card-image" src="images/ice-cream-cards/bilberry.png" width="168" height="168" alt="Черника">
                         <h3 class="product-card-title" >Черника</h3>
                     </a>
                         <p>Крем-брюле <br> с черничным джемом</p>
@@ -313,7 +314,7 @@
 
                 <li class="product-card">
                     <a class="product-card-link" href="product.html">
-                        <img class="product-card-image" src="images/ice-cream-cards/bubble-gum.jpg" width="168" height="168" alt="Бабл-гам">
+                        <img class="product-card-image" src="images/ice-cream-cards/buble-gum.png" width="168" height="168" alt="Бабл-гам">
                         <h3 class="product-card-title" >Бабл-гам</h3>
                     </a>
                         <p>Ванильный пломбир <br> со сладкой посыпкой</p>
@@ -375,15 +376,17 @@
             </div>
             <div class="subscription">
                 <h2 class="visually-hidden">Подписка</h2>
+                <div class="subs-background">
                     <p class="subs-description">Подпишитесь на нашу сладкую рассылку и будьте всегда
-                <br>в курсе всего самого вкусного, что у нас происходит. Обещаем
-                <br> не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+                    <br>в курсе всего самого вкусного, что у нас происходит. Обещаем
+                    <br> не спамить и не слать всякой ненужной ерунды. Честно =)</p>
 
-                <form class="subscription" action="https://echo.htmlacademy.ru/" method="post">
-                    <label for="subscription-letter"></label>
-                    <input class="field" placeholder="email@example.com" type="email" name="subscription-letter" id="subscription-letter">
-                    <button class="button button-extra subscription-letter" type="submit">Отправить</button>
-                </form>
+                    <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
+                        <label for="subscription-letter"></label>
+                        <input class="field" placeholder="email@example.com" type="email" name="subscription-letter" id="subscription-letter">
+                        <button class="button button-extra subscription-letter" type="submit">Отправить</button>
+                    </form>
+                </div>
             </div>
         </div>
 
@@ -395,7 +398,8 @@
             <div class="delivery-info">
                 <h3 class="delivery-title">Доставка любимого <br>
                     мороженого на дом</h3>
-                <p class="delivery-description">Хочется полакомиться любимым десертом,<br>
+                <p class="delivery-description">
+                Хочется полакомиться любимым десертом,<br>
                 но нет времени съездить в магазин? Закажите <br>
                 доставку мороженого на дом, и курьер<br>
                 привезёт вам ваш заказ в течение часа!</p>
@@ -502,7 +506,7 @@
 
         <div class="footer-nav-item center">
         <ul class="footer-nav first">
-            <li><b>Для поставщиков</b></li>
+            <li class="heart"><b>Для поставщиков</b></li>
             <li>О производстве</li>
         </ul>
         <ul class="footer-nav second">
