@@ -14,7 +14,17 @@
             </a>
             <ul class="navigation-list">
                 <li class="navigation-item">
-                    <a class="navigation-link navigation-link-current" href="#">Каталог</a>
+                    <a class="navigation-link catalog-btn navigation-link-current" href="#">Каталог
+                        <ul class="dropdown-content">
+                            <li class="dropdown-item">
+                                <a class="dropdown-link">Новинки</a>
+                            </li>
+                            <li class="dropdown-item">Сливочное</li>
+                            <li class="dropdown-item">Щербеты</li>
+                            <li class="dropdown-item">Фруктовый лед</li>
+                            <li class="dropdown-item">Мелорин</li>
+                        </ul>
+                    </a>
                 </li>
                 <li class="navigation-item">
                     <a class="navigation-link" href="#">Доставка и оплата</a>
@@ -102,7 +112,7 @@
                             <legend class="catalog-filter-title">
                                 <div class="range-wrapper-inputs">
                                 <label class="catalog-filter-label">
-                                    Цена: <input class="range-input" type="number" value="100" name="min-price">
+                                    Цена:<input class="range-input" type="number" value="100" name="min-price">
                                 </label>
                                 <label class="range-wrapper-inputs">
                                     ₽ - <input class="range-input" type="number" value="500" name="max-price"> ₽
@@ -112,7 +122,7 @@
 
                             <div class="range">
                                 <div class="range-scale">
-                                    <div class="range-bar" style="left: 42px; width: 100px">
+                                    <div class="range-bar" style="left: 40px; width: 56px">
                                         <button type="button" class="range-toggle toggle-min">
                                         </button>
                                         <button type="button" class="range-toggle toggle-max">
