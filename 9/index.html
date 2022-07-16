@@ -27,7 +27,7 @@
 
             <ul class="navigation-phone">
                 <li class="navigation-phone-item">
-                    <a class="navigation-link-phone" href="#">+7 800 555-86-28</a>
+                    <a class="navigation-link-phone" href="tel:+78005558628">+7 800 555-86-28</a>
                 </li>
             </ul>
 
@@ -42,10 +42,15 @@
                         <span class="visually-hidden">
                             Поиск
                         </span>
+                    <div class="popover popover-search">
+                        <div class="popover-content">
+                            <input class="popover-field search-field field" type="search" name="search" id="search" placeholder="Поиск по сайту">
+                        </div>
+                    </div>
                     </a>
                 </li>
                 <li class="navigation-user-item">
-                    <a class="navigation-user-link navigation-link-login" href="#">
+                    <a class="navigation-user-link navigation-link-login " href="#">
                         <svg class="navigation-icon" aria-hidden="true" focusable="false"  width="18" height="18" viewBox="0 0 16 17" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M9 2.52c0-.36.3-.66.67-.66h2.66a2 2 0 0 1 2
@@ -55,9 +60,31 @@
                         </svg>
                         Вход
                     </a>
+                    <div class="popover popover-login">
+                        <div class="popover-content">
+                            <h2 class="popover-title login">Личный кабинет</h2>
+                            <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
+                                <p class="field-group">
+                                    <label class="visually-hidden" for="auth-field">Логин</label>
+                                    <input class="auth-form-field field" type="text" name="auth-login" id="auth-login" value="email@example.com">
+                                </p>
+                                <p class="field-group">
+                                    <label class="visually-hidden" for="auth-password">Пароль:</label>
+                                    <input class="auth-form-field field" type="password" name="auth-password" id="auth-password" value="••••••">
+                                </p>
+                            </form>
+                            <div class="popover-links">
+                                <button class="button button-extra button-login" type="submit">Войти</button>
+                                <p class="login-links">
+                                    <a href="#">Забыли пароль?</a>
+                                    <a href="#">Регистрация</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </li>
                 <li class="navigation-user-item">
-                    <a class="navigation-user-link navigation-link-cart" href="#">
+                    <a class="navigation-user-link navigation-link-cart current" href="#">
                         <svg class="navigation-icon"  aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 16 17" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M1.17 2.1a.67.67 0 0 0 0 1.34h1.77l.47 2.34v.05l.97 4.83a1.83 1.83 0 0 0 1.82 1.47h5.62a1.83
@@ -66,7 +93,7 @@
                         </svg>
                         2 товара
                     </a>
-                    <div class="popover popover-cart popover-open">
+                    <div class="popover popover-cart">
                         <div class="popover-content">
                             <h2 class="popover-title">Корзина</h2>
                             <ul class="cart-item-list">
@@ -93,7 +120,6 @@
                                         </svg>
                                         <span class="visually-hidden">Удалить из корзины</span>
                                     </button>
-                                </li>
                             </ul>
                             <ul class="cart-sum">
                                 <li class="cart-item-sum">
@@ -101,6 +127,11 @@
                                 <a class="cart-item-sum">Итого: 790 ₽</a>
                             </li>
                             </ul>
+                        </div>
+                    </div>
+                    <div class="popover popover-cart-empty">
+                        <div class="popover-content">
+                            <h2 class="popover-title empty">Ваша корзина пока <br> пуста</h2>
                         </div>
                     </div>
                 </li>
@@ -116,7 +147,7 @@
         <h2 class="visually-hidden">Галлерея мороженого</h2>
         <div class="sliders">
             <div class="sliders-outer">
-                <div class="slider-item slider-active">
+                <div class="slider-item">
                     <div class="slider-text">
                         <h3 class="title-ice-cream">Нежный пломбир <br>с клубничным джемом</h3>
                         <p class="ice-cream-description">Натуральное мороженое из свежих сливок
@@ -134,7 +165,7 @@
                             </svg>
                                 <span class="visually-hidden">Предыдущее</span>
                         </button>
-                            <img src="images/ice-cream-waffle/strawberry.png" width="306" height="507" alt="strawberry">
+                        <img src="images/ice-cream-waffle/strawberry.png" width="306" height="507" alt="strawberry">
                         <button class="slider-button slider-next" type="button">
                             <svg class="slider-icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.14 2.86a.66.66 0 1 0-.95.95L10.4 8l-4.2
@@ -149,49 +180,76 @@
                     <div class="slider-image-third">
                         <img src="images/ice-cream-waffle/caramel-small.png" width="66" height="150" alt="caramel-small">
                     </div>
+                </div>
 
-                <div class="slider-item">
+                <div class="slider-item slider-active">
                     <div class="slider-text">
-                    <h3 class="title-ice-cream">Сливочное мороженое <br>со вкусом банана </h3>
-                    <p class="ice-cream-description">Сливочное мороженое с ярким банановым <br>
-                        вкусом подарит вам свежесть и наслаждение <br>
-                        даже в самый жаркий летний день. </p>
-                    <a class="button button-basic" href="#">Заказать</a>
+                        <h3 class="title-ice-cream">Сливочное мороженое <br>со вкусом банана </h3>
+                        <p class="ice-cream-description">Сливочное мороженое с ярким банановым <br>
+                            вкусом подарит вам свежесть и наслаждение <br>
+                            даже в самый жаркий летний день. </p>
+                        <a class="button button-basic" href="#">Заказать</a>
                     </div>
 
-                <div class="slider-image">
-                    <button class="slider-button slider-prev" type="button">
-                        <span class="visually-hidden">Предыдущее</span>
-                    </button>
-                    <img src="images/ice-cream-waffle/banana-big.png" width="306" height="507" alt="banana">
-                    <button class="slider-button slider-next" type="button">
-                        <span class="visually-hidden">Следующее</span>
-                    </button>
-                </div>
-                <img src="images/ice-cream-waffle/caramel-small.png" width="66" height="150" alt="caramel-small">
-                <img src="images/ice-cream-waffle/strawberry-small.png" width="66" height="150" alt="strawberry-small">
+                    <div class="slider-image">
+                        <button class="slider-button slider-prev" type="button">
+                            <svg class="slider-icon " aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.86 13.14a.66.66 0 0 0 .95-.95L5.6 8l4.2-4.2a.67.67
+                                0 0 0-.95-.94L4.2 7.52a.66.66 0 0 0 0 .94l4.66 4.68Z"/>
+                            </svg>
+                                <span class="visually-hidden">Предыдущее</span>
+                        </button>
+                        <img src="images/ice-cream-waffle/banana-big.png" width="306" height="507" alt="banana">
+                        <button class="slider-button slider-next" type="button">
+                            <svg class="slider-icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.14 2.86a.66.66 0 1 0-.95.95L10.4 8l-4.2
+                                4.2a.67.67 0 0 0 .95.94l4.66-4.67a.66.66 0 0 0 0-.94L7.15 2.86Z"/>
+                            </svg>
+                            <span class="visually-hidden">Следующее</span>
+                        </button>
+                    </div>
+                    <div class="slider-image-second">
+                        <img src="images/ice-cream-waffle/caramel-small.png" width="66" height="150" alt="caramel-small">
+                    </div>
+                    <div class="slider-image-third">
+                        <img src="images/ice-cream-waffle/strawberry-small.png" width="66" height="150" alt="strawberry-small">
+                    </div>
                 </div>
 
                 <div class="slider-item">
                     <div class="slider-text">
-                    <h3 class="title-ice-cream">Карамельный пломбир <br> с маршмеллоу</h3>
-                    <p class="ice-cream-description">Необычный сладкий десерт с карамельным<br>
-                        топпингом и кусочками зефира завоюет<br>
-                        сердца сладкоежек всех возрастов.</p>
-                    <a class="button button-order" href="#">Заказать</a>
+                        <h3 class="title-ice-cream">Карамельный пломбир <br> с маршмеллоу</h3>
+                        <p class="ice-cream-description">Необычный сладкий десерт с карамельным<br>
+                            топпингом и кусочками зефира завоюет<br>
+                            сердца сладкоежек всех возрастов.</p>
+                        <a class="button button-order" href="#">Заказать</a>
                     </div>
 
                     <div class="slide-image">
                         <button class="slider-button slider-prev" type="button">
+                            <svg class="slider-icon " aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.86 13.14a.66.66 0 0 0 .95-.95L5.6 8l4.2-4.2a.67.67
+                                0 0 0-.95-.94L4.2 7.52a.66.66 0 0 0 0 .94l4.66 4.68Z"/>
+                            </svg>
                              <span class="visually-hidden">Предыдущее</span>
                         </button>
-                        <img class="slider-image" src="images/ice-cream-waffle/caramel-big.png" width="306" height="507" alt="caramel">
+                            <img class="slider-image" src="images/ice-cream-waffle/caramel-big.png" width="306" height="507" alt="caramel">
                         <button class="slider-button slider-next" type="button">
+                            <svg class="slider-icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.14 2.86a.66.66 0 1 0-.95.95L10.4 8l-4.2
+                                4.2a.67.67 0 0 0 .95.94l4.66-4.67a.66.66 0 0 0 0-.94L7.15 2.86Z"/>
+                            </svg>
                             <span class="visually-hidden">Следующее</span>
                         </button>
                     </div>
-                    <img src="images/ice-cream-waffle/strawberry-small.png" width="66" height="150" alt="strawberry-small">
-                    <img src="images/ice-cream-waffle/banana-small.png" width="66" height="150" alt="banana-small">
+                    <div class="slider-image-second">
+                        <img src="images/ice-cream-waffle/strawberry-small.png" width="66" height="150" alt="strawberry-small">
+                    </div>
+                    <div class="slider-image-third">
+                        <img src="images/ice-cream-waffle/banana-small.png" width="66" height="150" alt="banana-small">
+                    </div>
                 </div>
             </div>
         </div>
@@ -216,8 +274,7 @@
                         <li class="slider-social-item">
                             <a class="icon-social-link" href="https://t.me/htmlacademy">
                                 <svg class="icon-social" aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path arial fill-rule="evenodd" clip-rule="evenodd" d="M24 12a12 12 0 1 1-24 0 12 12 0 0 1 24 0ZM12.43 8.86c-1.17.48-3.5 1.49-7
-                                    3.01-.57.23-.86.45-.9.67-.04.36.42.5 1.04.7l.27.08c.6.2 1.43.44 1.86.45.39 0 .82-.16 1.3-.48 3.27-2.21
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M24 12a12 12 0 1 1-24 0 12 12 0 0 1 24 0ZM12.43 8.86c-1.17.48-3.5 1.49-7 3.01-.57.23-.86.45-.9.67-.04.36.42.5 1.04.7l.27.08c.6.2 1.43.44 1.86.45.39 0 .82-.16 1.3-.48 3.27-2.21
                                     4.96-3.33 5.06-3.35.08-.02.18-.04.25.02.07.07.07.18.06.22-.05.19-1.84 1.86-2.77 2.72a28.24 28.24 0 0 0-.82.79c-.57.54-1 .96.02
                                     1.63.5.32.89.59 1.28.85a88.77 88.77 0 0 0 1.8 1.23c.5.35.95.67 1.5.62.32-.03.65-.33.82-1.23.4-2.13 1.18-6.73 1.36-8.63.01-.16
                                     0-.31-.02-.47a.5.5 0 0 0-.17-.33.78.78 0 0 0-.46-.14c-.46.01-1.15.25-4.48 1.64Z"/>
@@ -454,24 +511,38 @@
 
                 <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
                     <p class="field-group delivery-form-date">
-
-                        <label class="form-label" for="delivery-date">
-                            Дата</label>
-
+                        <span class="form-label">
+                        <label class="form-label" for="delivery-date">Дата</label>
+                        <span class="tooltip">
+                            <button class="tooltip-toggle" type="button">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7 2.125a4.875 4.875 0 1 0 0 9.75 4.875 4.875 0 0 0 0-9.75ZM.792 7a6.209 6.209 0 1 1 12.417 0A6.209 6.209 0 0 1 .792 7ZM7 6.333c.368 0 .667.299.667.667v2.217a.667.667 0 0 1-1.334 0V7c0-.368.299-.667.667-.667Zm0-2.216A.667.667 0 0 0 7 5.45h.006a.667.667 0 0 0 0-1.333H7Z" fill="#2D3440"/>
+                                </svg>
+                            </button>
+                            <span class="tooltip-text" role="tooltip" id="tooltip-label">
+                                Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони
+                            </span>
+                        </span>
+                        </span>
                         <input class="field" type="text" name="delivery-date" id="delivery-date" placeholder="01.04.2020">
                     </p>
                     <p class="field-group delivery-form-phone">
-
-                        <label class="form-label" for="delivery-phone">
-                            Телефон
-                        </label>
+                            <label class="form-label" for="delivery-phone">Телефон</label>
                         <input class="field" type="text" name="delivery-phone" id="delivery-phone" placeholder="+7 800 999-00-00">
                     </p>
 
                     <p class="field-group delivery-form-address">
-                        <label class="form-label" for="delivery-date">
-                            Адрес
-                        </label>
+                        <span class="form-label">
+                        <label class="form-label" for="delivery-date">Адрес</label>
+                        <span class="tooltip">
+                            <button class="tooltip-toggle" type="button">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7 2.125a4.875 4.875 0 1 0 0 9.75 4.875 4.875 0 0 0 0-9.75ZM.792 7a6.209 6.209 0 1 1 12.417 0A6.209 6.209 0 0 1 .792 7ZM7 6.333c.368 0 .667.299.667.667v2.217a.667.667 0 0 1-1.334 0V7c0-.368.299-.667.667-.667Zm0-2.216A.667.667 0 0 0 7 5.45h.006a.667.667 0 0 0 0-1.333H7Z" fill="#2D3440"/>
+                                </svg>
+                              </button>
+                              <span class="tooltip-text" role="tooltip" id="tooltip-label">Введите название улицы, дома и квартиры</span>
+                        </span>
+                    </span>
                         <input class="field" type="text" name="delivery-address" id="delivery-address" placeholder="ул. Большая Конюшенная, 19/8">
                     </p>
                     <button class="button button-extra delivery-submit" type="submit">Отправить</button>
@@ -513,7 +584,7 @@
                 <li class="footer-social-item">
                     <a class="icon-social-link" href="https://t.me/htmlacademy">
                         <svg class="icon-social" aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path arial fill-rule="evenodd" clip-rule="evenodd" d="M24 12a12 12 0 1 1-24 0 12 12 0 0 1 24 0ZM12.43 8.86c-1.17.48-3.5 1.49-7
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M24 12a12 12 0 1 1-24 0 12 12 0 0 1 24 0ZM12.43 8.86c-1.17.48-3.5 1.49-7
                             3.01-.57.23-.86.45-.9.67-.04.36.42.5 1.04.7l.27.08c.6.2 1.43.44 1.86.45.39 0 .82-.16 1.3-.48 3.27-2.21
                             4.96-3.33 5.06-3.35.08-.02.18-.04.25.02.07.07.07.18.06.22-.05.19-1.84 1.86-2.77 2.72a28.24 28.24 0 0 0-.82.79c-.57.54-1 .96.02
                             1.63.5.32.89.59 1.28.85a88.77 88.77 0 0 0 1.8 1.23c.5.35.95.67 1.5.62.32-.03.65-.33.82-1.23.4-2.13 1.18-6.73 1.36-8.63.01-.16
@@ -569,5 +640,30 @@
         </div>
     </div>
     </footer>
+    <div class="modal-container modal-container-close">
+        <div class="modal modal-feedback">
+            <button class="modal-close-button">
+              <span class="visually-hidden">Закрыть</span>
+            </button>
+            <section class="modal-content">
+              <h2 class="modal-title">Мы обязательно ответим вам!</h2>
+                <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
+                    <p class="field-group">
+                        <label class="visually-hidden" for="name">Имя и Фамилия</label>
+                        <input class="feedback-form-field field" type="text" id="name" name="name" placeholder="Имя и фамилия">
+                    </p>
+                    <p class="field-group">
+                        <label class="visually-hidden" for="mail-field">Email:</label>
+                        <input class="feedback-form-field field" type="text" name="mail" id="mail" placeholder="email@example.com">
+                    </p>
+                    <p class="field-group">
+                    <textarea class="feedback-form-field field" name="review" id="review" rows="5" >В свободной форме</textarea>
+                    </p>
+
+                <button class="button button-extra sent-form-button" type="submit">Отправить</button>
+                </form>
+            </section>
+        </div>
+    </div>
   </body>
 </html>
