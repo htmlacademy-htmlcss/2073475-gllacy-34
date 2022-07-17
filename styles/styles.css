@@ -56,6 +56,14 @@ body {
     vertical-align: top;
 }
 
+body.blue {
+    background-color: #69A9FF;
+}
+
+body.yellow {
+    background-color: #FCC850;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -141,16 +149,18 @@ body {
     list-style-type: none;
     padding: 0;
     text-align: left;
+    border-radius: 4px;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 
 .dropdown-content a {
     color: #2D3440;
-    padding: 12px 16px;
     text-decoration: none;
     display: block;
   }
 
-.catalog-btn:hover .dropdown-content {display: block;}
+.catalog-btn:hover ~ .dropdown-content {display: block;}
 
 .dropdown-item {
     font-family: 'Inter';
@@ -158,17 +168,22 @@ body {
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    padding: 8px 16px 8px 16px;
-    align-items:center;
+    padding: 8px 13px 8px 16px;
+    align-items: center;
 }
 
 .dropdown-item:first-child {
     margin-right: 16px;
-    padding-bottom: 4px;
+    margin-left: 16px;
+    padding-top: 8px;
+    padding-left: 0;
+    padding-bottom: 8px;
     border-bottom: 1px solid #E7E7E7;
   }
 
-
+.dropdown-link {
+    white-space: nowrap;
+}
 
 .navigation-phone {
     display: block;
@@ -257,7 +272,6 @@ body {
     background-color: rgba(252, 252, 252, 0.5);
     box-shadow:0 0 0 2px #2D3440;
 }
-
 
 
 .navigation-link-login {
@@ -717,6 +731,21 @@ body {
 
 .icon-social-link:focus-visible {
     outline: #2D3440;
+}
+
+.icon-social-link::before {
+    content: '';
+    z-index: 0;
+    width: 20px;
+    height: 20px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.icon-social-link:hover::before {
+    background-color:#2D3440;
 }
 
 .icon-social {
@@ -1620,7 +1649,7 @@ body {
 
 .select-control:focus {
     background-color: rgba(252, 252, 252, 0.3);
-    border: 2px solid #FCFCFC;
+    box-shadow: 0 0 0 2px #FCFCFC;
 }
 
 .select-control:focus-visible {
@@ -1659,24 +1688,24 @@ body {
     background-image: url(../images/icons/radio-default.svg);
 }
 
- .control-mark-fat:hover {
+.control-mark-fat:hover {
     left: 0;
     top: 2px;
     width: 16px;
     height: 16px;
     background-image: url(../images/icons/radio-default-white.svg);
-  }
+}
 
-  .control-input:disabled + .control-mark-fat{
+.control-input:disabled + .control-mark-fat{
     left: 0;
     top: 2px;
     width: 16px;
     height: 16px;
     background-image: url(../images/icons/radio-default.svg);
     opacity: 0.5;
-  }
+}
 
-  .control-input[type="radio"]:checked + .control-mark-fat {
+.control-input[type="radio"]:checked + .control-mark-fat {
     left: 0;
     top: 2px;
     width: 16px;
@@ -1699,6 +1728,11 @@ body {
     height: 16px;
     background-image: url(../images/icons/radio-checked.svg);
     opacity: 0.5;
+}
+
+.control-input:focus + .control-mark {
+    outline-offset: 1px;
+    outline: 1px solid currentColor;
 }
 
 .products-inner {

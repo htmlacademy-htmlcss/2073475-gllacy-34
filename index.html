@@ -41,12 +41,13 @@
                         <span class="visually-hidden">
                             Поиск
                         </span>
+                    </a>
                     <div class="popover popover-search">
                         <div class="popover-content">
                             <input class="popover-field search-field field" type="search" name="search" id="search" placeholder="Поиск по сайту">
                         </div>
                     </div>
-                    </a>
+
                 </li>
                 <li class="navigation-user-item">
                     <a class="navigation-user-link navigation-link-login " href="#">
@@ -65,7 +66,7 @@
                             <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
                                 <p class="field-group">
                                     <label class="visually-hidden" for="auth-field">Логин</label>
-                                    <input class="auth-form-field field" type="text" name="auth-login" id="auth-login" value="email@example.com">
+                                    <input class="auth-form-field field" type="text" name="auth-login" id="auth-field" value="email@example.com">
                                 </p>
                                 <p class="field-group">
                                     <label class="visually-hidden" for="auth-password">Пароль:</label>
@@ -146,7 +147,7 @@
         <h2 class="visually-hidden">Галлерея мороженого</h2>
         <div class="sliders">
             <div class="sliders-outer">
-                <div class="slider-item">
+                <div class="slider-item slider-active">
                     <div class="slider-text">
                         <h3 class="title-ice-cream">Нежный пломбир <br>с клубничным джемом</h3>
                         <p class="ice-cream-description">Натуральное мороженое из свежих сливок
@@ -181,7 +182,7 @@
                     </div>
                 </div>
 
-                <div class="slider-item slider-active">
+                <div class="slider-item">
                     <div class="slider-text">
                         <h3 class="title-ice-cream">Сливочное мороженое <br>со вкусом банана </h3>
                         <p class="ice-cream-description">Сливочное мороженое с ярким банановым <br>
@@ -518,7 +519,7 @@
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M7 2.125a4.875 4.875 0 1 0 0 9.75 4.875 4.875 0 0 0 0-9.75ZM.792 7a6.209 6.209 0 1 1 12.417 0A6.209 6.209 0 0 1 .792 7ZM7 6.333c.368 0 .667.299.667.667v2.217a.667.667 0 0 1-1.334 0V7c0-.368.299-.667.667-.667Zm0-2.216A.667.667 0 0 0 7 5.45h.006a.667.667 0 0 0 0-1.333H7Z" fill="#2D3440"/>
                                 </svg>
                             </button>
-                            <span class="tooltip-text" role="tooltip" id="tooltip-label">
+                            <span class="tooltip-text" role="tooltip">
                                 Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони
                             </span>
                         </span>
@@ -539,7 +540,7 @@
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M7 2.125a4.875 4.875 0 1 0 0 9.75 4.875 4.875 0 0 0 0-9.75ZM.792 7a6.209 6.209 0 1 1 12.417 0A6.209 6.209 0 0 1 .792 7ZM7 6.333c.368 0 .667.299.667.667v2.217a.667.667 0 0 1-1.334 0V7c0-.368.299-.667.667-.667Zm0-2.216A.667.667 0 0 0 7 5.45h.006a.667.667 0 0 0 0-1.333H7Z" fill="#2D3440"/>
                                 </svg>
                               </button>
-                              <span class="tooltip-text" role="tooltip" id="tooltip-label">Введите название улицы, дома и квартиры</span>
+                              <span class="tooltip-text" role="tooltip">Введите название улицы, дома и квартиры</span>
                         </span>
                     </span>
                         <input class="field" type="text" name="delivery-address" id="delivery-address" placeholder="ул. Большая Конюшенная, 19/8">
@@ -653,7 +654,7 @@
                     </p>
                     <p class="field-group">
                         <label class="visually-hidden" for="mail-field">Email:</label>
-                        <input class="feedback-form-field field" type="text" name="mail" id="mail" placeholder="email@example.com">
+                        <input class="feedback-form-field field" type="text" name="mail" id="mail-field" placeholder="email@example.com">
                     </p>
                     <p class="field-group">
                     <textarea class="feedback-form-field field" name="review" id="review" rows="5" >В свободной форме</textarea>
