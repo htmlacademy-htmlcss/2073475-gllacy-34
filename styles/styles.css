@@ -79,6 +79,7 @@ body.yellow {
 
 .navigation {
     display: flex;
+    justify-content: space-between;
     width: 1170px;
     margin: 0 auto;
     margin-top: 24px;
@@ -96,11 +97,12 @@ body.yellow {
 .navigation-list {
     display: flex;
     flex-wrap: wrap;
-    width: 598px;
+    width: 400px;
     margin: 0;
     margin-top: 6px;
     padding: 0;
     list-style-type: none;
+    padding-right: 186px;
 }
 
 .navigation-link {
@@ -172,11 +174,24 @@ body.yellow {
     align-items: center;
 }
 
+.dropdown-item:hover {
+    background-color: #FFCBD8;
+}
+
+.dropdown-item:active {
+    background-color: #FF7799;
+}
+
+.downdrop-item-current {
+    background-color:#FF4A78;
+}
+
+.downdrop-item-current .dropdown-link {
+    color: #FCFCFC;
+}
+
 .dropdown-item:first-child {
-    margin-right: 16px;
-    margin-left: 16px;
     padding-top: 8px;
-    padding-left: 0;
     padding-bottom: 8px;
     border-bottom: 1px solid #E7E7E7;
   }
@@ -198,7 +213,6 @@ body.yellow {
 .navigation-link-phone {
     text-decoration: none;
     color:#2D3440;
-    margin-right: 16px;
 }
 
 .navigation-phone:hover {
@@ -220,6 +234,7 @@ body.yellow {
 
 .navigation-user {
     display: flex;
+    justify-content: flex-end;
     margin: 0;
     margin-top: 6px;
     flex-wrap: wrap;
@@ -715,10 +730,6 @@ body.yellow {
     border-radius: 24px;
 }
 
-.icon-social-link:hover {
-    background-color:#2D3440;
-}
-
 .icon-social-link:active {
     background-color:#2D3440;
     opacity: 0.5;
@@ -734,17 +745,18 @@ body.yellow {
 }
 
 .icon-social-link::before {
+    position: absolute;
     content: '';
     z-index: 0;
     width: 20px;
     height: 20px;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
 }
 
 .icon-social-link:hover::before {
+    display: block;
     background-color:#2D3440;
 }
 
@@ -1054,12 +1066,6 @@ body.yellow {
     border-radius: 16px;
 }
 
-.subs-background {
-    background:#FCFCFC;
-    padding: 26px;
-    border-radius: 16px;
-}
-
 .subs-description {
     line-height: 22px;
     margin: 0;
@@ -1262,7 +1268,7 @@ body.yellow {
 }
 
 .field:invalid:hover {
-    border: 2px solid #EA5454;
+    box-shadow: 0 0 0 2px #EA5454;
 }
 
 .field:disabled {
@@ -2196,4 +2202,18 @@ body.yellow {
 
 .search-field {
     width: 324px;
+}
+
+.navigation-link-serach .navigation-current {
+    background-color:#FF2F64;
+    fill: #FCFCFC;
+}
+
+.navigation-current {
+    background-color:#FF2F64;
+    color:#FCFCFC;
+}
+
+.navigation-current .navigation-icon{
+    fill:#FCFCFC;
 }
