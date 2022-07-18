@@ -228,8 +228,9 @@ body.yellow {
     box-shadow: none;
 }
 
-.navigation-link-phone:focus-visible {
-    outline: #2D3440;
+.navigation-link-phone:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #2d3440;
 }
 
 .navigation-user {
@@ -382,7 +383,7 @@ body.yellow {
 
 .slider-item {
     display: none;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     margin: 0;
     padding: 0;
@@ -405,6 +406,7 @@ body.yellow {
 
 .slider-text {
     margin-left: 70px;
+    margin-right: 59px;
 }
 
 .ice-cream-description {
@@ -414,6 +416,7 @@ body.yellow {
 
 .slider-image {
     position: relative;
+    margin-right: 79px;
 }
 
 .slider-image .active{
@@ -495,21 +498,11 @@ body.yellow {
   fill:#FCFCFC;
 }
 
-.slider-image-second::before {
-    position: absolute;
-    display: block;
-    content: '';
-    width: 100px;
-    height: 100px;
-    background-color: #FFCBD8;
-    opacity: 0.4;
-    border-radius: 200px;
-    z-index: -1;
-    top: 210px;
-    right: 125px;
+.slider-image-small {
+    position: relative;
 }
 
-.slider-image-third::before {
+.slider-image-small::before {
     position: absolute;
     display: block;
     content: '';
@@ -519,9 +512,14 @@ body.yellow {
     opacity: 0.4;
     border-radius: 200px;
     z-index: -1;
-    top: 210px;
-    right: -18px;
+    bottom: 25px;
+    right: -20px;
 }
+
+.slider-image-small:not(:last-child) {
+    margin-right: 75px;
+}
+
 /* Buttons */
 
 .button {
@@ -745,6 +743,7 @@ body.yellow {
 }
 
 .icon-social-link::before {
+    display: block;
     position: absolute;
     content: '';
     z-index: 0;
@@ -756,7 +755,6 @@ body.yellow {
 }
 
 .icon-social-link:hover::before {
-    display: block;
     background-color:#2D3440;
 }
 
@@ -884,7 +882,14 @@ body.yellow {
 }
 
 .product-card-link {
+    display: block;
+    width: 100%;
     text-decoration: none;
+}
+
+.product-card-link:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #2D3440;
 }
 
 .price-content {
@@ -902,6 +907,7 @@ body.yellow {
     background-color:#FF2F64;
     border: none;
     border-radius: 26px;
+    cursor: pointer;
 }
 
 .button-buy:hover {
@@ -1130,7 +1136,7 @@ body.yellow {
 
 .form-container {
     width: 500px;
-    min-height: 406px;
+    height: 408px;
     margin: 64px;
     margin-left: 0;
     background-color: #FCFCFC;
@@ -1184,7 +1190,7 @@ body.yellow {
 /* Contacts */
 
 .contacts {
-    min-height: 492px;
+    padding: 64px;
     font-size: 16px;
     line-height: 22px;
     background-image: url(../images/address.jpg);
@@ -1197,8 +1203,6 @@ body.yellow {
 .container-contacts {
     width: 343px;
     min-height: 364px;
-    margin-left: 64px;
-    padding-top: 64px;
 }
 
 .contacts-description {
@@ -1297,7 +1301,7 @@ body.yellow {
 .tooltip {
   position: absolute;
   margin-top: 4px;
-  margin-left: 2px;
+  margin-left: 4px;
   width: 16px;
   height: 16px;
 }
@@ -1335,24 +1339,22 @@ body.yellow {
     display: none;
 }
 
+.tooltip-text::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #FCFCFC transparent transparent;
+    top: 11px;
+    left: -20px;
+}
+
 .tooltip-toggle:hover + .tooltip-text,
 .tooltip-toggle:focus + .tooltip-text {
   display: block;
 }
-
-.tooltip-text:after {
-    content:'';
-    width: 14px;
-    height: 6px;
-    position:absolute;
-    transform: rotate(180deg);
-    top: 100%;
-    left:0;
-    right:0;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
 /* Footer */
 
 .page-footer {
@@ -1390,6 +1392,16 @@ body.yellow {
     color: #2D3440;
 }
 
+.made-link:hover {
+    color:#FCFCFC;
+}
+
+.made-link:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #2d3440;
+}
+
+
 .center {
     display: flex;
     margin-left: 299px;
@@ -1421,10 +1433,20 @@ body.yellow {
     margin-right: 24px;
 }
 
-.footer-nav a {
+.footer-nav .footer-nav-link {
     text-decoration: none;
     color:#2D3440;
 }
+
+.footer-nav .footer-nav-link:hover {
+    color:#FCFCFC;
+}
+
+.footer-nav-link:focus {
+    outline: none;
+    box-shadow:0 0 0 2px #2D3440;
+}
+
 
 .item-link {
     font-size: 12px;
@@ -1567,6 +1589,11 @@ body.yellow {
     margin-right: 28px;
     font-weight: 700;
     font-style: bold;
+}
+
+.breadcrumbs-link:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #2d3440;
 }
 
 .breadcrumbs-item::after {
@@ -1891,6 +1918,11 @@ body.yellow {
     border: none;
     appearance: textfield;
     color: #2D3440;
+  }
+
+  .range-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #2d3440;
   }
 
   .range-input::-webkit-outer-spin-button,
@@ -2220,7 +2252,24 @@ body.yellow {
 }
 
 .search-field {
+    position: relative;
     width: 324px;
+}
+
+.search-item-button {
+    position: absolute;
+    background: transparent;
+    padding: 0;
+    width: 16px;
+    height: 16px;
+    top: 40px;
+    right: 29px;
+}
+
+.search-reset {
+    width: 16px;
+    height: 16px;
+    fill: rgba(45, 52, 64, .4);
 }
 
 .navigation-link-serach .navigation-current {
