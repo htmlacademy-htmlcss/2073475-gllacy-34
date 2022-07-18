@@ -1332,8 +1332,8 @@ body.yellow {
     display: block;
     width: 169px;
     position: absolute;
-    top: -10px;
-    left: 100%;
+    top: -12px;
+    left: 145%;
     border: 1px solid #B9B9B9;
     z-index: 1;
     display: none;
@@ -1342,13 +1342,15 @@ body.yellow {
 .tooltip-text::after {
     content: "";
     position: absolute;
-    width: 0;
-    height: 0;
-    border-width: 10px;
-    border-style: solid;
-    border-color: transparent #FCFCFC transparent transparent;
-    top: 11px;
-    left: -20px;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    top: 13px;
+    left: -6px;
+    background-color: #FCFCFC;
+    border-color: transparent;
+    border-left: 1px solid #B9B9B9;
+    border-bottom: 1px solid #B9B9B9;
 }
 
 .tooltip-toggle:hover + .tooltip-text,
@@ -1433,12 +1435,12 @@ body.yellow {
     margin-right: 24px;
 }
 
-.footer-nav .footer-nav-link {
+.footer-nav-link {
     text-decoration: none;
     color:#2D3440;
 }
 
-.footer-nav .footer-nav-link:hover {
+.footer-nav-link:hover {
     color:#FCFCFC;
 }
 
@@ -1576,7 +1578,6 @@ body.yellow {
 
 .breadcrumbs-item {
     position: relative;
-    justify-self: space-between;
     list-style-type: none;
 }
 
@@ -1585,10 +1586,10 @@ body.yellow {
 }
 
 .breadcrumbs-link {
+    text-decoration: none;
     color: inherit;
     margin-right: 28px;
     font-weight: 700;
-    font-style: bold;
 }
 
 .breadcrumbs-link:focus {
@@ -1596,28 +1597,19 @@ body.yellow {
     box-shadow: 0 0 0 2px #2d3440;
 }
 
-.breadcrumbs-item::after {
+.breadcrumbs-item:not(:last-child)::after {
     content: '';
     display: block;
     position: absolute;
     top: 4px;
-    right: 95px;
+    right: 3px;
     width: 12px;
     height: 12px;
     background-image: url(../images/icons/chevrons-right.svg);
     background-position: center;
 }
 
-.breadcrumbs-item:not(:last-child)::after {
-    content: none;
-}
-
-
-.page-main {
-    text-decoration: none;
-}
-
-.page-catalog {
+.breadcrumbs-link-current {
     text-decoration: none;
     border-bottom: 1px solid #2D3440;
 }
